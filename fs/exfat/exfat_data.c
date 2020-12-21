@@ -57,7 +57,7 @@
 /*----------------------------------------------------------------------*/
 
 /* FAT cache */
-#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 36)
+#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,36)
 DECLARE_MUTEX(f_sem);
 #else
 DEFINE_SEMAPHORE(f_sem);
@@ -67,7 +67,7 @@ BUF_CACHE_T FAT_cache_lru_list;
 BUF_CACHE_T FAT_cache_hash_list[FAT_CACHE_HASH_SIZE];
 
 /* buf cache */
-#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 36)
+#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,36)
 DECLARE_MUTEX(b_sem);
 #else
 DEFINE_SEMAPHORE(b_sem);

@@ -55,7 +55,7 @@
 /*                                                                      */
 /*======================================================================*/
 
-#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 36)
+#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,36)
 DECLARE_MUTEX(z_sem);
 #else
 DEFINE_SEMAPHORE(z_sem);
@@ -131,7 +131,7 @@ TIMESTAMP_T *tm_current(TIMESTAMP_T *tp)
 	struct timespec ts;
 	time_t second, day, leap_day, month, year;
 
-#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 8, 0)
+#if LINUX_VERSION_CODE < KERNEL_VERSION(4,8,0)
 	ts = CURRENT_TIME_SEC;
 #else
 	ktime_get_real_ts(&ts);

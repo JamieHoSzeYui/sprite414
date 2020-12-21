@@ -1,6 +1,3 @@
-#
-# Makefile for all kinds of Fingerprint
-#
-
-obj-$(CONFIG_GOODIX_FINGERPRINT) += goodix/
-obj-$(CONFIG_FPC_FINGERPRINT) += fpc/
+#fingerprint_detect should before fpc1022
+obj-$(CONFIG_FINGERPRINT_DETECT)    += fingerprint_detect/
+obj-$(CONFIG_FINGERPRINT_GOODIX)	+= goodix/
