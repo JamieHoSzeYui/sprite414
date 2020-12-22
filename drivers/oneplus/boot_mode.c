@@ -12,7 +12,6 @@ char *enum_ftm_mode[] = {"normal",
 						 "aging",
 						 "ftm_at",
 						 "ftm_rf",
-						 "ftm_wlan",
 						 "ftm_mos",
 						 "charge"
 };
@@ -33,8 +32,6 @@ static int __init boot_mode_init(char *str)
 			boot_mode = MSM_BOOT_MODE__FACTORY;
 		else if (strncmp(str, "ftm_rf", 6) == 0)
 			boot_mode = MSM_BOOT_MODE__RF;
-		else if (strncmp(str, "ftm_wlan", 8) == 0)
-			boot_mode = MSM_BOOT_MODE__WLAN;
 		else if (strncmp(str, "ftm_mos", 7) == 0)
 			boot_mode = MSM_BOOT_MODE__MOS;
 		else if (strncmp(str, "ftm_recovery", 12) == 0)
